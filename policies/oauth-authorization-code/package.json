@@ -1,0 +1,56 @@
+{
+  "name": "@filamentjs/oauth-authorization-code",
+  "version": "0.1.0",
+  "description": "Complete opaque-token OAuth authorization-code flow with S256 PKCE for FilamentJS",
+  "type": "module",
+  "main": "./dist/oauth-authorization-code.js",
+  "types": "./dist/oauth-authorization-code.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/oauth-authorization-code.d.ts",
+      "import": "./dist/oauth-authorization-code.js"
+    }
+  },
+  "files": [
+    "dist/oauth-authorization-code.js",
+    "dist/oauth-authorization-code.js.map",
+    "dist/oauth-authorization-code.d.ts",
+    "dist/oauth-authorization-code.d.ts.map",
+    "dist/src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node ./node_modules/typescript/bin/tsc -p tsconfig.json",
+    "link:local": "node scripts/link-local.mjs",
+    "test": "npm run link:local && npm run build && node --test dist/test/*.test.js",
+    "example": "npm run link:local && npm run build && node dist/example/example.js",
+    "demo": "npm run link:local && npm run build && node dist/demo/demo.js",
+    "prepack": "npm test"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "peerDependencies": {
+    "@filamentjs/foundation": "0.1.0",
+    "@filamentjs/oauth-client-authentication": "0.1.0",
+    "filamentjs": "0.6.0"
+  },
+  "peerDependenciesMeta": {
+    "@filamentjs/oauth-client-authentication": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "oauth4webapi": "3.8.7",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "filamentjs",
+    "oauth",
+    "pkce",
+    "authorization-code"
+  ],
+  "license": "ISC"
+}

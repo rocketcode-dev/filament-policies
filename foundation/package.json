@@ -1,0 +1,44 @@
+{
+  "name": "@filamentjs/foundation",
+  "version": "0.1.0",
+  "description": "Shared dependency-free types and utilities for FilamentJS policies",
+  "type": "module",
+  "main": "./dist/foundation.js",
+  "types": "./dist/foundation.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/foundation.d.ts",
+      "import": "./dist/foundation.js"
+    }
+  },
+  "files": [
+    "dist/foundation.js",
+    "dist/foundation.js.map",
+    "dist/foundation.d.ts",
+    "dist/foundation.d.ts.map",
+    "dist/src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node ./node_modules/typescript/bin/tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "example": "npm run build && node dist/example/example.js",
+    "demo": "npm run build && node dist/demo/demo.js",
+    "prepack": "npm test"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "keywords": [
+    "filamentjs",
+    "typescript",
+    "policy",
+    "types"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "typescript": "^5.9.3"
+  }
+}

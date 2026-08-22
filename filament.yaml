@@ -1,0 +1,22 @@
+schema: 1
+filament:
+  package: filamentjs
+  source: ../filament
+  supported:
+    - version: 0.6.0
+      peerRange: "0.6.0"
+      referenceCommit: b463bb58682d76d4ac0a06976915341a1eb2ff3e
+      test: true
+node:
+  supported: [24]
+packages:
+  license: ISC
+  scope: "@filamentjs"
+  module: NodeNext
+  tests: node:test
+development:
+  localSources:
+    filamentjs: ../filament
+    foundation: ./foundation
+    redis: ./redis
+  requireLocalTests: true

@@ -1,0 +1,48 @@
+{
+  "name": "@filamentjs/request-logging",
+  "version": "0.1.0",
+  "description": "Opinionated completion logging for FilamentJS requests",
+  "type": "module",
+  "main": "./dist/request-logging.js",
+  "types": "./dist/request-logging.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/request-logging.d.ts",
+      "import": "./dist/request-logging.js"
+    }
+  },
+  "files": [
+    "dist/request-logging.js",
+    "dist/request-logging.js.map",
+    "dist/request-logging.d.ts",
+    "dist/request-logging.d.ts.map",
+    "dist/src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node ./node_modules/typescript/bin/tsc -p tsconfig.json",
+    "link:local-filament": "node scripts/link-local-filament.mjs",
+    "test": "npm run link:local-filament && npm run build && node --test dist/test/*.test.js",
+    "example": "npm run link:local-filament && npm run build && node dist/example/example.js",
+    "demo": "npm run link:local-filament && npm run build && node dist/demo/demo.js",
+    "prepack": "npm test"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "peerDependencies": {
+    "filamentjs": "0.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "filamentjs",
+    "logging",
+    "observability",
+    "middleware"
+  ],
+  "license": "ISC"
+}

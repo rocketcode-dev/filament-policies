@@ -1,0 +1,49 @@
+{
+  "name": "@filamentjs/redis",
+  "version": "0.1.0",
+  "description": "Shared Redis connection and atomic adapter support for FilamentJS policies",
+  "type": "module",
+  "main": "./dist/redis.js",
+  "types": "./dist/redis.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/redis.d.ts",
+      "import": "./dist/redis.js"
+    }
+  },
+  "files": [
+    "dist/redis.js",
+    "dist/redis.js.map",
+    "dist/redis.d.ts",
+    "dist/redis.d.ts.map",
+    "dist/src/",
+    "README.md",
+    "redis.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node ./node_modules/typescript/bin/tsc -p tsconfig.json",
+    "test": "npm run test:contracts && npm run build && node --test dist/test/*.test.js",
+    "test:contracts": "node ./node_modules/typescript/bin/tsc -p test/contracts/tsconfig.json",
+    "example": "npm run build && node dist/example/example.js",
+    "demo": "npm run build && node dist/demo/demo.js",
+    "prepack": "npm test"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "keywords": [
+    "filamentjs",
+    "redis",
+    "policy",
+    "adapter"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "redis": "6.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "typescript": "^5.9.3"
+  }
+}

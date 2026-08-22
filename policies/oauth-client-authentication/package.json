@@ -1,0 +1,47 @@
+{
+  "name": "@filamentjs/oauth-client-authentication",
+  "version": "0.1.0",
+  "description": "OAuth client_secret_basic authentication for FilamentJS protocol endpoints",
+  "type": "module",
+  "main": "./dist/oauth-client-authentication.js",
+  "types": "./dist/oauth-client-authentication.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/oauth-client-authentication.d.ts",
+      "import": "./dist/oauth-client-authentication.js"
+    }
+  },
+  "files": [
+    "dist/oauth-client-authentication.js",
+    "dist/oauth-client-authentication.js.map",
+    "dist/oauth-client-authentication.d.ts",
+    "dist/oauth-client-authentication.d.ts.map",
+    "dist/src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node ./node_modules/typescript/bin/tsc -p tsconfig.json",
+    "link:local": "node scripts/link-local.mjs",
+    "test": "npm run link:local && npm run build && node --test dist/test/*.test.js",
+    "example": "npm run link:local && npm run build && node dist/example/example.js",
+    "demo": "npm run link:local && npm run build && node dist/demo/demo.js",
+    "prepack": "npm test"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "peerDependencies": {
+    "filamentjs": "0.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "filamentjs",
+    "oauth",
+    "client-authentication"
+  ],
+  "license": "ISC"
+}
