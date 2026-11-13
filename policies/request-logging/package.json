@@ -1,6 +1,6 @@
 {
   "name": "@filamentjs/request-logging",
-  "version": "0.1.0",
+  "version": "0.6.1",
   "description": "Opinionated completion logging for FilamentJS requests",
   "type": "module",
   "main": "./dist/request-logging.js",
@@ -32,7 +32,7 @@
     "node": ">=24"
   },
   "peerDependencies": {
-    "filamentjs": "0.6.0"
+    "filamentjs": "0.6.1"
   },
   "devDependencies": {
     "@types/node": "^20.19.43",

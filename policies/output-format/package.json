@@ -1,6 +1,6 @@
 {
   "name": "@filamentjs/output-format",
-  "version": "0.1.0",
+  "version": "0.6.1",
   "description": "JSON, JSONP, and YAML output negotiation for FilamentJS",
   "type": "module",
   "main": "./dist/output-format.js",
@@ -32,7 +32,7 @@
     "node": ">=24"
   },
   "peerDependencies": {
-    "filamentjs": "0.6.0"
+    "filamentjs": "0.6.1"
   },
   "dependencies": {
     "yaml": "2.9.0"

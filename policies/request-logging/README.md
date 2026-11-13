@@ -80,8 +80,7 @@ partial line. `onSkip` can diagnose that configuration.
 
 The default sink calls `console.log`. Callback failures are contained because
 the response is already committed; the default error report deliberately omits
-the thrown value in case a transport error contains credentials. Later HTTP,
-syslogd, journald, or Logstash transports belong behind the sink interface.
+the thrown value in case a transport error contains credentials.
 
 Custom formatters and sinks receive untrusted path text and must preserve
 redaction and log-injection safety themselves.
@@ -113,8 +112,6 @@ The unattended demo starts a real Filament server, calls a logged endpoint and
 an endpoint that opts out, prints the live responses/log evidence, closes the
 server, and exits. Tests use the local Filament source configured by the root
 `filament.yaml`; set `FILAMENTJS_SOURCE` to override that checkout.
-
-There is no pre-0.1 migration contract.
 
 ## License
 

@@ -1,6 +1,6 @@
 {
   "name": "@filamentjs/rate-limiting",
-  "version": "0.1.0",
+  "version": "0.6.1",
   "description": "Named multi-bucket rate limiting for FilamentJS",
   "type": "module",
   "main": "./dist/rate-limiting.js",
@@ -32,7 +32,7 @@
     "node": ">=24"
   },
   "peerDependencies": {
-    "filamentjs": "0.6.0"
+    "filamentjs": "0.6.1"
   },
   "devDependencies": {
     "@types/node": "^20.19.43",

@@ -117,3 +117,23 @@ closes the server/store and exits. There is no pre-0.1 migration contract.
 ## License
 
 ISC
+
+## Runtime type guards
+
+Every exported interface has a corresponding exported `is<TypeName>(value:
+unknown)` guard: `isFixedWindowLimit`, `isPlan`, `isBucketCharge`,
+`isRateLimitEndpointOptions`, `isAppMeta`, `isLimitDecision`,
+`isRateLimitDecision`, `isContextMeta`, `isRateLimitStore`, `isSetupOptions`,
+and `isStandaloneStoreOptions`.
+
+`isPlan` checks bucket names, nonempty limit arrays, unique IDs per bucket,
+and positive safe integer capacities and windows. Empty bucket maps remain
+valid, matching setup's existing validation. `isSetupOptions` requires at least
+one valid named plan and checks that `defaultPlan`, when present, is an own
+entry in `plans`. Endpoint guards require nonempty, unique bucket charges.
+Decision guards check numeric bounds and consistency between `allowed` and
+`violated`. Optional fields may be omitted; explicit `undefined` is rejected,
+matching the package's exact optional property types.
+
+Store methods and callbacks are checked for callability without executing them;
+the guards cannot verify their signatures or returned values.

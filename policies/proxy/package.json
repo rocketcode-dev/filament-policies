@@ -1,6 +1,6 @@
 {
   "name": "@filamentjs/proxy",
-  "version": "0.1.0",
+  "version": "0.6.1",
   "description": "Strict exact-route reverse proxy policy for FilamentJS",
   "type": "module",
   "main": "./dist/proxy.js",
@@ -32,7 +32,7 @@
     "node": ">=24"
   },
   "peerDependencies": {
-    "filamentjs": "0.6.0"
+    "filamentjs": "0.6.1"
   },
   "devDependencies": {
     "@types/node": "^20.19.43",

@@ -1,6 +1,6 @@
 {
   "name": "@filamentjs/oauth-authorization-code",
-  "version": "0.1.0",
+  "version": "0.6.1",
   "description": "Complete opaque-token OAuth authorization-code flow with S256 PKCE for FilamentJS",
   "type": "module",
   "main": "./dist/oauth-authorization-code.js",
@@ -33,8 +33,8 @@
   },
   "peerDependencies": {
     "@filamentjs/foundation": "0.1.0",
-    "@filamentjs/oauth-client-authentication": "0.1.0",
-    "filamentjs": "0.6.0"
+    "@filamentjs/oauth-client-authentication": "0.6.1",
+    "filamentjs": "0.6.1"
   },
   "peerDependenciesMeta": {
     "@filamentjs/oauth-client-authentication": {
